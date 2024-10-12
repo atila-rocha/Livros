@@ -20,7 +20,7 @@ class ProfileActivity : AppCompatActivity() {
         }
         val imageview2: FloatingActionButton =findViewById(R.id.floatingActionButton)
         imageview2.setOnClickListener {
-            val intentex = Intent(this, ProfileActivity::class.java)
+            val intentex = Intent(this, AvaliacoesActivity::class.java)
             startActivity(intentex)
         }
     }
