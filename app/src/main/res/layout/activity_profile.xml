@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:scaleType="matrix"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_cortado" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:contentDescription="Botão flutuante: Acessibilidade"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/baseline_accessibility_new_24" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutPrincipal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <ImageView
+            android:id="@+id/imageViewUser"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.22000003"
+            app:srcCompat="@drawable/image_cortado" />
+
+        <TextView
+            android:id="@+id/textViewUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Átila Carvalho Rocha"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewUsername"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewUser"
+            tools:layout_editor_absoluteX="130dp" />
+
+        <TextView
+            android:id="@+id/textViewLivros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Livros Favoritos"
+            android:textSize="20sp" />
+
+        <HorizontalScrollView
+            android:id="@+id/HorizontalScrollViewLivros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutLivros"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButtonArquiteturaLimpa"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="0"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Livro Arquitetura Limpa"
+                    android:src="@drawable/arquitetura_limpa" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonAEraDaIA"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="0"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Livro A Era da Inteligência Artificial"
+                    app:srcCompat="@drawable/a_era_da_ia" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonCienciaDeDados"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="0"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Livro Ciência de Dados"
+                    app:srcCompat="@drawable/ciencia_de_dados" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonPythonParaExcel"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="0"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Livro Python para Excel"
+                    app:srcCompat="@drawable/python_para_excel" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/textViewAvaliações"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avaliações"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutAvaliacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButtonCapa"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:contentDescription="Livro Arquitetura Limpa"
+                app:srcCompat="@drawable/arquitetura_limpa" />
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutAvaliaçãoLivro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewLivro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Arquitetura Limpa" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutStars"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/baseline_star_24" />
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/baseline_star_24" />
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/baseline_star_24" />
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/baseline_star_24" />
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:scaleX="1"
+                        android:scaleY="1"
+                        app:srcCompat="@drawable/baseline_star_24" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewComentario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Livro muito bom porém é preciso ter muita abstração para conseguir entender" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
